@@ -39,6 +39,8 @@ export interface Props {
   renderTitle?: (value: string) => ReactNode | undefined
   getPopupContainer?: (props: any) => HTMLElement
   maxTagCount?: number | 'responsive'
+  showSearch?: boolean
+  searchInputPlaceholder?: string | string[]
 }
 
 export interface PopupProps extends Props {
@@ -64,7 +66,7 @@ const Popup = (props: PopupProps) => {
     <div className={`${prefix}-popup`} ref={ref}>
       {data && data.length ? (
         <>
-          <Menu />
+          <Menu {...props} />
           <div className={`${prefix}-popup-footer`}>
             {selectAll ? (
               <div className={`${prefix}-popup-all`}>

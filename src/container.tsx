@@ -23,6 +23,7 @@ const useCascade = (params?: Props) => {
   } = params || {}
   const [popupVisible, setPopupVisible] = useState(false)
   const dataRef = useRef<Array<TreeNode> | undefined>(data)
+  const [searchWords, setSearchWords] = useState<string[]>([])
 
   useEffect(() => {
     dataRef.current = data
@@ -177,6 +178,7 @@ const useCascade = (params?: Props) => {
     if (popupVisible) {
       setValue(transformValue(valueProp || hackValue.current))
       resetMenuState()
+      setSearchWords([])
     }
   }, [popupVisible])
 
@@ -197,6 +199,8 @@ const useCascade = (params?: Props) => {
     triggerChange,
     selectLeafOnly,
     hackValue,
+    searchWords,
+    setSearchWords,
   }
 }
 

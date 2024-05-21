@@ -19,6 +19,7 @@
     flex: 1 0 auto;
     min-width: 164px;
     height: 180px;
+    width: 100%;
 
     &:not(:first-child) {
       border-left: 1px solid #f0f0f0;
@@ -62,6 +63,19 @@
         }
       }
     }
+
+    &-input {
+      min-width: 100px;
+      margin: 5px;
+      width: calc(100% - 10px) !important;
+    }
+  }
+
+  &-column-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &-popup {
