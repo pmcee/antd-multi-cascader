@@ -136,7 +136,7 @@ storiesOf('MultiCascader', MultiCascader as any).add('Search', () => {
     <>
       <MultiCascader
         selectAll
-        data={options}
+        data={options as any}
         value={state}
         onChange={setState}
         allowClear

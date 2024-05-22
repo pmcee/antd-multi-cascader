@@ -1,10 +1,13 @@
 {
-  "name": "antd-multi-cascader",
-  "version": "2.0.1",
-  "description": "A multiple cascader component for antd",
+  "name": "antd-multi-search-cascader",
+  "version": "1.0.0",
+  "description": "A search multiple cascader component for antd",
   "main": "dist/index.js",
-  "repository": "https://github.com/HelKyle/antd-multi-cascader",
-  "author": "helkylefighting@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmcee/antd-multi-cascader.git"
+  },
+  "author": "mepmcee@gmail.com",
   "license": "MIT",
   "private": false,
   "keywords": [
@@ -61,5 +64,10 @@
   "dependencies": {
     "rc-overflow": "^1.2.0-alpha.10",
     "unstated-next": "^1.1.0"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/pmcee/antd-multi-cascader/issues"
+  },
+  "homepage": "https://github.com/pmcee/antd-multi-cascader#readme"
 }
